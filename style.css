@@ -1,55 +1,87 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
+:root {
+  --primary: #00bcd4;
+  --bg: #f4f7f9;
+  --text: #333;
+  --header-bg: #0f1115;
+  --card-bg: white;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+* {
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #f7f9fb;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 header {
-  background: #111;
+  background: var(--header-bg);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
 }
 
-header h1 {
-  margin-bottom: 0.2rem;
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary);
+}
+
+header nav {
+  margin-top: 1rem;
 }
 
 header nav a {
-  margin: 0 1rem;
-  color: #00bcd4;
+  color: var(--primary);
+  margin: 0 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 section {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: auto;
+  margin-top: 2rem;
 }
 
 h2 {
-  color: #007acc;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 1.2rem;
 }
 
 ul li {
-  background: white;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 0.5rem;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #eee;
-  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #ddd;
+  margin-top: 3rem;
 }
+
